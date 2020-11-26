@@ -49,8 +49,9 @@ export default function App() {
             onPreviousSong={selectPrevSong}
             onNextSong={selectNextSong}
           />
-          <section>
-            <ul>
+          <section className="songs">
+            <h2>Songs</h2>
+            <ul className="song-list">
               {songs.map((song) => (
                 <SongListitem
                   key={song.audioUrl}

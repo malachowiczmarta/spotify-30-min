@@ -4,8 +4,8 @@ export default function SongListitem({ isCurrent, song, onSelectSong }) {
   return (
     <section>
       <li
+        className={`song-list-item  ${isCurrent ? " selected" : ""}`}
         onClick={() => onSelectSong(song.audioUrl)}
-        style={{ background: isCurrent ? "darkslategrey" : "" }}
       >
         {song.title} by {song.artist}
       </li>

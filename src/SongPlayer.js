@@ -9,10 +9,16 @@ export default function SongPlayer({ song, onPreviousSong, onNextSong }) {
     audioRef.current.pause();
   }
   return (
-    <section>
+    <section className="player">
       <h1>Music player</h1>
-      <img width="250" height="250" src={song.coverUrl} alt="cover song" />
-      <div>
+      <img
+        className="cover"
+        width="250"
+        height="250"
+        src={song.coverUrl}
+        alt="cover song"
+      />
+      <div className="buttons">
         <button onClick={onPreviousSong}>previous</button>
         <button onClick={play}>play</button>
         <button onClick={pause}>pause</button>
